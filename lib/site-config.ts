@@ -1,19 +1,19 @@
 export const siteConfig = {
-    name: "OCEAN OF TEETH",
-    subtitle: "COSMETIC AND IMPLANT DENTAL CLINIC",
-    phone: "+91 7744975111",
-    phoneSecondary: "+91 9820160133",
-    email: "11oceanofteeth@gmail.com",
+    name: "City Dental Clinic",
+    subtitle: "Advanced Dental Care Center",
+    phone: "+1 (555) 123-4567",
+    phoneSecondary: "+1 (555) 987-6543",
+    email: "contact@citydental.com",
     address: {
-        line1: "Office No. 11, Kohinoor Grandeur,",
-        line2: "Mukai Chowk, Kiwale (Ravet),",
-        line3: "Pune - 411033",
-        googleMapsLink: "https://www.google.com/maps/place/Ocean+Of+Teeth+Dental+Clinic/@18.6601168,73.7320773,970m/data=!3m1!1e3!4m14!1m7!3m6!1s0x3bc2b0a71b689abb:0x23cdb8981474ada1!2sKohinoor+Grandeur!8m2!3d18.6600741!4d73.7321212!16s%2Fg%2F11b7jy1ksn!3m5!1s0x3bc2b1c74811a857:0x8c7cb03558b189cf!8m2!3d18.6595458!4d73.7325458!16s%2Fg%2F11t1sjt5pn?entry=ttu",
-        mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.279619177699!2d73.7431201!3d18.6514216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b9e67c9d961d%3A0xe5459b7636e0965e!2sKohinoor%20Grandeur!5e0!3m2!1sen!2sin!4v1709827000000!5m2!1sen!2sin"
+        line1: "123 Health Avenue,",
+        line2: "Medical District,",
+        line3: "Cityville - 54321",
+        googleMapsLink: "#",
+        mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.279619177699!2d73.7431201!3d18.6514216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDM5JzA1LjEiTiA3M8KwNDQnMzUuMiJF!5e0!3m2!1sen!2sin!4v1638867498750!5m2!1sen!2sin"
     },
-    timing: "Mon-Sun: 10:00 AM - 9:00 PM",
+    timing: "Mon-Sat: 9:00 AM - 8:00 PM",
     social: {
-        whatsapp: "https://wa.me/917744975111?text=Hi",
+        whatsapp: "https://wa.me/15551234567",
         instagram: "#",
         facebook: "#",
         twitter: "#"
@@ -30,81 +30,75 @@ export const siteConfig = {
         }
     },
     hero: {
-        tagline: "Dental Care",
-        headingLine1: "Always Smile",
-        headingLine2: "like twinkle",
-        description: "Dental care is the maintenance of healthy teeth and the practice of keeping the mouth and teeth clean to prevent dental disorders.",
+        tagline: "Your Smile Matters",
+        headingLine1: "Experience the",
+        headingLine2: "Perfect Smile",
+        description: "We provide comprehensive dental care for your entire family. From routine checkups to cosmetic procedures, we are dedicated to your oral health.",
         offer: {
-            text: "Offer",
-            value: "35%",
+            text: "New Patient Offer",
+            value: "20% OFF",
             visible: true
         }
     },
     features: {
         title: "Why Choose Us",
-        headingLine1: "Ocean Of Teeth",
-        headingLine2: "Dental Clinic",
-        description: "We combine expertise with a gentle touch to provide the comprehensive dental care you deserve. Your oral health is our priority.",
+        headingLine1: "Excellence in",
+        headingLine2: "Dental Care",
+        description: "Our clinic offers state-of-the-art facilities and a team of experienced professionals to ensure you receive the best possible treatment.",
         items: [
             {
                 icon: "Users",
-                title: "Expert Dentist",
-                desc: "Highly experienced professionals dedicated to your perfect smile."
+                title: "Expert Team",
+                desc: "Highly qualified dentists with years of experience."
             },
             {
                 icon: "HeartPulse",
-                title: "Modern Dental Tech",
-                desc: "State-of-the-art equipment for precise and painless treatments."
+                title: "Advanced Technology",
+                desc: "Using the latest dental equipment for precise treatments."
             },
             {
                 icon: "Pill",
-                title: "Personalized Care",
-                desc: "Tailored treatment plans designed specifically for your unique needs."
+                title: "Pain-Free Density",
+                desc: "Comfortable procedures with modern anesthetic techniques."
             }
         ]
     },
     doctor: {
-        label: "Meet The Doctor",
-        name: "Dr. Leena Shah",
-        qualification: "Director & Dental Surgeon (BDS)",
-        description1: "Dr. Leena Shah is the heart and soul of Ocean of Teeth Dental Clinic. As the leading dental professional, she brings extensive experience in cosmetic, implant, and general dentistry to every procedure.",
-        description2: "Dedicated to providing the highest standard of personalized care, Dr. Shah ensures that every patient feels comfortable and leaves with a healthy, confident smile. Her approach combines state-of-the-art technology with a compassionate touch, making her the trusted face of dental health in our community.",
+        label: "Meet The Expert",
+        name: "Dr. ALEX SMITH",
+        qualification: "Chief Dental Surgeon (BDS, MDS)",
+        description1: "Dr. Alex Smith is a dedicated dental professional with over 15 years of experience. He specializes in cosmetic and restorative dentistry, helping thousands of patients achieve their dream smiles.",
+        description2: "Committed to continuous learning, Dr. Smith stays updated with the latest advancements in dental science to provide the highest standard of care.",
         image: "/images/doctor-profile.png",
         stats: {
             label: "Experience",
-            value: "18+ Years"
+            value: "15+ Years"
         }
     },
     testimonials: {
-        label: "Testimonials",
-        headingLine1: "Happy",
-        headingLine2: "Stories",
-        description: "Don't just take our word for it. Here is what our patients have to say about their experience with us.",
+        label: "Patient Stories",
+        headingLine1: "What Our",
+        headingLine2: "Patients Say",
+        description: "Read about the experiences of our valued patients and see why we are the preferred choice for dental care.",
         items: [
             {
-                name: "Rohan Miller",
-                role: "Dental Implant Patient",
-                content: "I was terrified of the dentist, but Dr. Leena made me feel so comfortable. The implant procedure was painless, and I can finally smile with confidence again!",
+                name: "John Doe",
+                role: "Dental Implant",
+                content: "The best dental experience I've ever had. The staff was friendly and the procedure was completely painless.",
                 stars: 5,
             },
             {
-                name: "Priya Sharma",
-                role: "Cosmetic Dentistry",
-                content: "The teeth whitening results are incredible. The clinic is so modern and clean. I recommend Ocean Of Teeth to all my friends and family.",
+                name: "Jane Roe",
+                role: "Teeth Whitening",
+                content: "I'm amazed by the results! My smile is so much brighter now. Highly recommend this clinic.",
                 stars: 5,
             },
             {
-                name: "Amit Desai",
-                role: "Root Canal Treatment",
-                content: "Top-notch technology and very professional staff. I didn't feel a thing during my root canal. Best dental experience in Pune.",
+                name: "Michael Bean",
+                role: "Root Canal",
+                content: "Professional, clean, and efficient. Dr. Smith explained everything clearly and made me feel at ease.",
                 stars: 5,
-            },
-            {
-                name: "Sneha Patil",
-                role: "Regular Checkup",
-                content: "Dr. Leena is wonderful with kids. My daughter actually looks forward to her dental appointments now. Highly recommended!",
-                stars: 5,
-            },
+            }
         ]
     }
 };
