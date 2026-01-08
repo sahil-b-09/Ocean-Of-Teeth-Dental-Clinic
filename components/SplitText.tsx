@@ -24,7 +24,7 @@ export default function SplitText({ children, className = "", delay = 0 }: Split
             opacity: 1,
             y: 0,
             transition: {
-                type: "spring",
+                type: "spring" as const,
                 damping: 12,
                 stiffness: 100,
             },
@@ -33,7 +33,7 @@ export default function SplitText({ children, className = "", delay = 0 }: Split
             opacity: 0,
             y: 20,
             transition: {
-                type: "spring",
+                type: "spring" as const,
                 damping: 12,
                 stiffness: 100,
             },
