@@ -19,7 +19,7 @@ export const siteConfig = {
         twitter: "#"
     },
     images: {
-        logo: "/images/logo.png", // Keeps generic for now
+        logo: "/images/dr-kawale-logo.png",
         hero: "/images/hero_perfect_smile_indian.png"
     },
     theme: {
@@ -85,7 +85,7 @@ export const siteConfig = {
         qualification: "Chief Dental Surgeon",
         description1: "Dr. Sushma Kawale is a highly skilled dental surgeon dedicated to providing exceptional oral healthcare in Ravet. With a focus on patient comfort and advanced techniques, she ensures every visit is a positive experience.",
         description2: "Specializing in Root Canals, Implants, and Cosmetic Dentistry, Dr. Kawale combines clinical expertise with a compassionate approach to help you achieve a healthy, confident smile.",
-        image: "/images/doctor-profile.png", // Generic placeholder
+        image: "/images/dr-sushma-profile.jpg",
         stats: {
             label: "Experience",
             value: "10+ Years" // Placeholder
