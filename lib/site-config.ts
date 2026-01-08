@@ -41,6 +41,34 @@ export const siteConfig = {
             visible: true
         }
     },
+    features: {
+        title: "Why Choose Us",
+        headingLine1: "Superior",
+        headingLine2: "Dental Experience",
+        description: "We combine advanced technology with compassionate care to ensure the best oral health for you.",
+        items: [
+            {
+                icon: "Users",
+                title: "Expert Team",
+                desc: "Highly qualified doctors dedicated to your oral health."
+            },
+            {
+                icon: "Zap",
+                title: "Advanced Tech",
+                desc: "State-of-the-art equipment for precise treatments."
+            },
+            {
+                icon: "HeartPulse",
+                title: "Painless Care",
+                desc: "Gentle techniques ensuring a comfortable experience."
+            },
+            {
+                icon: "Shield",
+                title: "Sterilization",
+                desc: "Strict hygiene protocols for your complete safety."
+            }
+        ]
+    },
     services: [
         {
             title: "Root Canal Treatment",
