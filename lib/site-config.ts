@@ -41,43 +41,71 @@ export const siteConfig = {
         }
     },
     features: {
-        title: "Our Services",
-        headingLine1: "Complete",
-        headingLine2: "Oral Care",
-        description: "We offer a wide range of dental treatments to ensure your teeth stay healthy and beautiful.",
+        title: "Why Choose Us",
+        headingLine1: "Superior",
+        headingLine2: "Dental Experience",
+        description: "We combine advanced technology with compassionate care to ensure the best oral health for you.",
         items: [
             {
-                icon: "Gem",
-                title: "Dental Implants",
-                desc: "Replace missing teeth with durable and natural-looking implants."
-            },
-            {
-                icon: "Smile",
-                title: "Braces & Aligners",
-                desc: "Correct misalignment and achieve a perfect smile with our orthodontic solutions."
-            },
-            {
-                icon: "Sparkles",
-                title: "Teeth Whitening",
-                desc: "Brighten your smile safely and effectively with our whitening treatments."
+                icon: "Users",
+                title: "Expert Team",
+                desc: "Highly qualified doctors dedicated to your oral health."
             },
             {
                 icon: "Zap",
-                title: "Root Canal",
-                desc: "Advanced endodontic therapy to save trusted teeth from extraction."
+                title: "Advanced Tech",
+                desc: "State-of-the-art equipment for precise treatments."
+            },
+            {
+                icon: "HeartPulse",
+                title: "Painless Care",
+                desc: "Gentle techniques ensuring a comfortable experience."
             },
             {
                 icon: "Shield",
-                title: "Preventive Care",
-                desc: "Regular checkups and cleanings to maintain optimal oral health."
-            },
-            {
-                icon: "Users",
-                title: "Family Dentistry",
-                desc: "Comprehensive care for patients of all ages."
+                title: "Sterilization",
+                desc: "Strict hygiene protocols for your complete safety."
             }
         ]
     },
+    services: [
+        {
+            title: "Dental Implants",
+            slug: "dental-implants",
+            short: "Replace missing teeth with durable and natural-looking implants.",
+            image: "/images/service-implants.png"
+        },
+        {
+            title: "Braces & Aligners",
+            slug: "braces-aligners",
+            short: "Correct misalignment and achieve a perfect smile with our orthodontic solutions.",
+            image: "/images/service-braces.png"
+        },
+        {
+            title: "Teeth Whitening",
+            slug: "teeth-whitening",
+            short: "Brighten your smile safely and effectively with our whitening treatments.",
+            image: "/images/service-whitening.png"
+        },
+        {
+            title: "Root Canal",
+            slug: "root-canal",
+            short: "Advanced endodontic therapy to save trusted teeth from extraction.",
+            image: "/images/service-rct.png"
+        },
+        {
+            title: "Preventive Care",
+            slug: "preventive-care",
+            short: "Regular checkups and cleanings to maintain optimal oral health.",
+            image: "/images/service-cleaning.png"
+        },
+        {
+            title: "Family Dentistry",
+            slug: "family-dentistry",
+            short: "Comprehensive care for patients of all ages.",
+            image: "/images/service-kids.png"
+        }
+    ],
     doctor: {
         label: "Meet The Expert",
         name: "Dr. Komal Raut-Chavan",

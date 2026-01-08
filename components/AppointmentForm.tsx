@@ -175,6 +175,19 @@ export default function AppointmentForm() {
                                     >
                                         {isSubmitting ? "Sending..." : "Confirm Appointment"}
                                     </button>
+
+                                    <div className="mt-4 flex flex-col items-center gap-2">
+                                        <span className="text-gray-400 text-sm">or</span>
+                                        <a
+                                            href={`https://wa.me/${siteConfig.phone.replace(/\D/g, '')}?text=Hi%20${siteConfig.doctor.name.split(" ")[0]}%2C%20I%20would%20like%20to%20book%20an%20appointment%20for%20${formData.service || "a%20checkup"}`}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="inline-flex items-center gap-2 text-[#25D366] font-bold border border-[#25D366]/30 px-6 py-3 rounded-xl hover:bg-[#25D366]/10 transition-colors"
+                                        >
+                                            <Phone className="w-5 h-5 fill-current" />
+                                            Book via WhatsApp
+                                        </a>
+                                    </div>
                                 </div>
                             </form>
                         )}
