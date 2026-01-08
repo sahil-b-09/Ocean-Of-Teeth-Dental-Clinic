@@ -34,9 +34,9 @@ export default function FAQ() {
         <section className="py-20 bg-white">
             <div className="container mx-auto px-4 max-w-4xl">
                 <div className="text-center mb-12">
-                    <span className="text-[#00A651] font-bold tracking-widest uppercase text-sm mb-2 block">Common Questions</span>
-                    <h2 className="text-4xl font-bold text-[#434E96] mb-4 font-serif">
-                        Frequently Asked <span className="text-[#00A651]">Questions</span>
+                    <span className="text-primary font-bold tracking-widest uppercase text-sm mb-2 block">Common Questions</span>
+                    <h2 className="text-4xl font-bold text-secondary mb-4 font-serif">
+                        Frequently Asked <span className="text-primary">Questions</span>
                     </h2>
                 </div>
 
@@ -47,10 +47,10 @@ export default function FAQ() {
                                 onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
                                 className="w-full flex items-center justify-between p-6 bg-white text-left focus:outline-none group"
                             >
-                                <span className={`text-lg font-bold transition-colors ${openIndex === idx ? 'text-[#00A651]' : 'text-[#434E96]'}`}>
+                                <span className={`text-lg font-bold transition-colors ${openIndex === idx ? 'text-primary' : 'text-secondary'}`}>
                                     {faq.question}
                                 </span>
-                                <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-colors ${openIndex === idx ? 'bg-[#00A651] text-white' : 'bg-gray-100 text-gray-500 group-hover:bg-[#00A651]/10'}`}>
+                                <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-colors ${openIndex === idx ? 'bg-primary text-white' : 'bg-gray-100 text-gray-500 group-hover:bg-primary/10'}`}>
                                     {openIndex === idx ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
                                 </div>
                             </button>

@@ -1,9 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import SplitText from "./SplitText";
+import { siteConfig } from "@/lib/site-config";
 
 export default function Hero() {
 
@@ -22,25 +22,32 @@ export default function Hero() {
                     transition={{ duration: 0.8 }}
                     className="max-w-xl"
                 >
-                    <span className="uppercase tracking-[0.2em] text-sm font-bold text-[#00A651] mb-4 block">
-                        Dental Care
+                    <span
+                        className="uppercase tracking-[0.2em] text-sm font-bold mb-4 block"
+                        style={{ color: siteConfig.theme.colors.primary }}
+                    >
+                        {siteConfig.hero.tagline}
                     </span>
-                    <h1 className="text-5xl md:text-7xl font-bold leading-[1.1] mb-6 font-serif text-[#434E96]">
-                        <SplitText delay={0.2}>Always Smile</SplitText> <br />
-                        <span className="text-[#C5A059]">
-                            <SplitText delay={0.6}>like twinkle</SplitText>
+                    <h1
+                        className="text-5xl md:text-7xl font-bold leading-[1.1] mb-6 font-serif"
+                        style={{ color: siteConfig.theme.colors.secondary }}
+                    >
+                        <SplitText delay={0.2}>{siteConfig.hero.headingLine1}</SplitText> <br />
+                        <span style={{ color: siteConfig.theme.colors.accent }}>
+                            <SplitText delay={0.6}>{siteConfig.hero.headingLine2}</SplitText>
                         </span>
                     </h1>
                     <p className="text-gray-600 text-lg mb-8 leading-relaxed max-w-md">
-                        Dental care is the maintenance of healthy teeth and the practice of keeping the mouth and teeth clean to prevent dental disorders.
+                        {siteConfig.hero.description}
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-6 items-start sm:items-center">
                         <a
-                            href="https://wa.me/917744975111?text=Hi"
+                            href={siteConfig.social.whatsapp}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center text-[#434E96] font-bold hover:text-[#00A651] transition-colors text-lg group"
+                            className="inline-flex items-center font-bold hover:opacity-80 transition-colors text-lg group"
+                            style={{ color: siteConfig.theme.colors.secondary }}
                         >
                             Chat With Us
                             <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
@@ -71,17 +78,22 @@ export default function Hero() {
                     {/* Circular Main Image Mask */}
                     <div className="relative w-[400px] h-[400px] md:w-[500px] md:h-[500px] rounded-full overflow-hidden border-8 border-gray-100 bg-blue-50 mx-auto">
                         <img
-                            src="/images/hero_perfect_smile_indian.png"
+                            src={siteConfig.images.hero}
                             alt="Beautiful Smile"
                             className="w-full h-full object-cover"
                         />
                     </div>
 
                     {/* Floating "Offer" Badge */}
-                    <div className="absolute top-10 left-0 md:left-10 bg-[#00A651] text-white rounded-full w-32 h-32 md:w-40 md:h-40 flex flex-col items-center justify-center shadow-lg border-4 border-white/20 animate-bounce-slow">
-                        <span className="text-lg font-serif italic">Offer</span>
-                        <span className="text-4xl md:text-5xl font-bold">35%</span>
-                    </div>
+                    {siteConfig.hero.offer.visible && (
+                        <div
+                            className="absolute top-10 left-0 md:left-10 text-white rounded-full w-32 h-32 md:w-40 md:h-40 flex flex-col items-center justify-center shadow-lg border-4 border-white/20 animate-bounce-slow"
+                            style={{ backgroundColor: siteConfig.theme.colors.primary }}
+                        >
+                            <span className="text-lg font-serif italic">{siteConfig.hero.offer.text}</span>
+                            <span className="text-4xl md:text-5xl font-bold">{siteConfig.hero.offer.value}</span>
+                        </div>
+                    )}
 
                     {/* Decorative Curved Arrow (SVG) */}
                     <div className="absolute bottom-10 left-0 w-24 h-24 text-gray-200 hidden md:block">

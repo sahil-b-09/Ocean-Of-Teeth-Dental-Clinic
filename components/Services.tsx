@@ -51,12 +51,12 @@ import SplitText from "./SplitText";
 
 export default function Services() {
     return (
-        <section id="services" className="py-20 bg-[#FDFBF7]">
+        <section id="services" className="py-20 bg-gray-50">
             <div className="container mx-auto px-4">
                 <div className="text-center max-w-2xl mx-auto mb-16">
-                    <h3 className="text-[#00A651] font-semibold uppercase tracking-wider mb-2">Our Services</h3>
-                    <h2 className="text-3xl md:text-4xl font-bold text-[#434E96] mb-4 font-serif">
-                        <SplitText>Complete</SplitText> <span className="text-[#C5A059]"><SplitText delay={0.3}>Dental Solutions</SplitText></span>
+                    <h3 className="text-primary font-semibold uppercase tracking-wider mb-2">Our Services</h3>
+                    <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-4 font-serif">
+                        <SplitText>Complete</SplitText> <span className="text-accent"><SplitText delay={0.3}>Dental Solutions</SplitText></span>
                     </h2>
                     <p className="text-gray-600">
                         Click on any service to learn more about our procedures and treatments.
@@ -76,10 +76,10 @@ export default function Services() {
                             <TiltCard>
                                 <Link
                                     href={`/services/${service.slug}`}
-                                    className="bg-white p-8 border border-gray-100 group text-left flex flex-col items-start hover:shadow-2xl hover:border-[#00A651]/20 transition-all cursor-pointer h-full relative rounded-2xl"
+                                    className="bg-white p-8 border border-gray-100 group text-left flex flex-col items-start hover:shadow-2xl hover:border-primary/20 transition-all cursor-pointer h-full relative rounded-2xl"
                                     style={{ transform: "translateZ(20px)" }}
                                 >
-                                    <div className="mb-6 text-[#434E96] group-hover:text-[#00A651] transition-colors relative z-10 bg-white p-2 rounded-lg" style={{ transform: "translateZ(30px)" }}>
+                                    <div className="mb-6 text-secondary group-hover:text-primary transition-colors relative z-10 bg-white p-2 rounded-lg" style={{ transform: "translateZ(30px)" }}>
                                         <div className="w-16 h-16 relative">
                                             <img
                                                 src={service.image}
@@ -89,7 +89,7 @@ export default function Services() {
                                         </div>
                                     </div>
                                     <h3
-                                        className="text-xl font-bold text-[#434E96] mb-3 font-serif min-h-[56px] flex items-center group-hover:text-[#00A651] transition-colors"
+                                        className="text-xl font-bold text-secondary mb-3 font-serif min-h-[56px] flex items-center group-hover:text-primary transition-colors"
                                         style={{ transform: "translateZ(25px)" }}
                                     >
                                         {service.title}
@@ -102,7 +102,7 @@ export default function Services() {
                                     </p>
 
                                     <span
-                                        className="inline-flex items-center font-bold text-[#00A651] hover:text-[#434E96] transition-colors group-inner mt-auto"
+                                        className="inline-flex items-center font-bold text-primary hover:text-secondary transition-colors group-inner mt-auto"
                                         style={{ transform: "translateZ(30px)" }}
                                     >
                                         Learn more

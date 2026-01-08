@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Phone, MapPin, Clock, Menu, X, Facebook, Instagram } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { siteConfig } from "@/lib/site-config";
 
 export default function Header() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -21,33 +22,36 @@ export default function Header() {
         { name: "Home", href: "#home" },
         { name: "Services", href: "#services" },
         { name: "About Us", href: "#about" },
-        { name: "Contact", href: "https://wa.me/917744975111?text=Hi" },
+        { name: "Contact", href: siteConfig.social.whatsapp },
     ];
 
     return (
         <header className={`w-full z-50 transition-all duration-300 ${isScrolled ? "fixed top-0 bg-white/95 backdrop-blur-sm shadow-md" : "relative bg-white"}`}>
             {/* Top Bar */}
-            <div className="bg-primary text-white py-2 text-sm hidden md:block">
+            <div
+                className="text-white py-2 text-sm hidden md:block"
+                style={{ backgroundColor: siteConfig.theme.colors.primary }}
+            >
                 <div className="container mx-auto px-4 flex justify-between items-center">
                     <div className="flex space-x-6">
                         <div className="flex items-center gap-2">
                             <MapPin className="w-4 h-4" />
-                            <span>Kohinoor Grandeur, Kiwale (Ravet), Pune</span>
+                            <span>{siteConfig.address.line1} {siteConfig.address.line2}</span>
                         </div>
                         <div className="flex items-center gap-2">
                             <Clock className="w-4 h-4" />
-                            <span>Mon-Sun: 10:00 AM - 9:00 PM</span>
+                            <span>{siteConfig.timing}</span>
                         </div>
                     </div>
                     <div className="flex items-center gap-4">
-                        <a href="tel:+917744975111" className="flex items-center gap-2 hover:text-secondary transition-colors">
+                        <a href={`tel:${siteConfig.phone.replace(/\s/g, "")}`} className="flex items-center gap-2 hover:opacity-80 transition-opacity">
                             <Phone className="w-4 h-4" />
-                            <span>+91 7744975111</span>
+                            <span>{siteConfig.phone}</span>
                         </a>
                         <div className="flex items-center gap-3 border-l border-white/20 pl-4">
                             {/* Placeholders for social icons */}
-                            <Instagram className="w-4 h-4 hover:text-secondary cursor-pointer" />
-                            <Facebook className="w-4 h-4 hover:text-secondary cursor-pointer" />
+                            <Instagram className="w-4 h-4 hover:opacity-80 cursor-pointer" />
+                            <Facebook className="w-4 h-4 hover:opacity-80 cursor-pointer" />
                         </div>
                     </div>
                 </div>
@@ -58,13 +62,19 @@ export default function Header() {
                 <div className="flex justify-between items-center">
                     {/* Logo */}
                     <Link href="/" className="flex items-center gap-3 group">
-                        <img src="/images/logo.png" alt="Ocean Of Teeth Logo" className="h-12 w-auto object-contain transform group-hover:scale-110 transition-transform duration-300" />
+                        <img src={siteConfig.images.logo} alt="Logo" className="h-12 w-auto object-contain transform group-hover:scale-110 transition-transform duration-300" />
                         <div>
-                            <div className="text-xl md:text-2xl font-bold text-[#C5A059] leading-tight font-serif tracking-wide">
-                                OCEAN OF TEETH
+                            <div
+                                className="text-xl md:text-2xl font-bold leading-tight font-serif tracking-wide"
+                                style={{ color: siteConfig.theme.colors.accent }}
+                            >
+                                {siteConfig.name}
                             </div>
-                            <div className="text-[0.6rem] md:text-xs text-[#00A651] font-bold tracking-widest uppercase">
-                                COSMETIC AND IMPLANT DENTAL CLINIC
+                            <div
+                                className="text-[0.6rem] md:text-xs font-bold tracking-widest uppercase"
+                                style={{ color: siteConfig.theme.colors.primary }}
+                            >
+                                {siteConfig.subtitle}
                             </div>
                         </div>
                     </Link>
@@ -75,15 +85,20 @@ export default function Header() {
                             <Link
                                 key={link.name}
                                 href={link.href}
-                                className="font-medium text-gray-700 hover:text-primary transition-colors relative group"
+                                className="font-medium text-gray-700 hover:opacity-80 transition-colors relative group"
+                                style={{ color: undefined }} // Let hover work naturally or via state if needed, simpler to keep gray-700 and just hover color
                             >
-                                {link.name}
-                                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-secondary transition-all group-hover:w-full"></span>
+                                <span className="hover:text-primary transition-colors">{link.name}</span>
+                                <span
+                                    className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all group-hover:w-full"
+                                    style={{ backgroundColor: siteConfig.theme.colors.secondary }}
+                                ></span>
                             </Link>
                         ))}
                         <Link
                             href="#appointment"
-                            className="bg-primary hover:bg-teal-600 text-white px-6 py-2.5 rounded-full font-medium transition-all transform hover:scale-105 shadow-lg shadow-primary/20"
+                            className="text-white px-6 py-2.5 rounded-full font-medium transition-all transform hover:scale-105 shadow-lg"
+                            style={{ backgroundColor: siteConfig.theme.colors.primary }}
                         >
                             Book Appointment
                         </Link>
@@ -119,7 +134,8 @@ export default function Header() {
                                 >
                                     <Link
                                         href={link.href}
-                                        className="block font-medium text-gray-700 hover:text-[#00A651] py-3 border-b border-gray-100 text-lg transition-colors"
+                                        className="block font-medium text-gray-700 py-3 border-b border-gray-100 text-lg transition-colors"
+                                        style={{ color: undefined }}
                                         onClick={() => setIsMobileMenuOpen(false)}
                                     >
                                         {link.name}
@@ -133,7 +149,8 @@ export default function Header() {
                             >
                                 <Link
                                     href="#appointment"
-                                    className="block bg-[#00A651] text-white text-center py-4 rounded-xl font-bold mt-4 shadow-lg active:scale-95 transition-transform"
+                                    className="block text-white text-center py-4 rounded-xl font-bold mt-4 shadow-lg active:scale-95 transition-transform"
+                                    style={{ backgroundColor: siteConfig.theme.colors.primary }}
                                     onClick={() => setIsMobileMenuOpen(false)}
                                 >
                                     Book Appointment

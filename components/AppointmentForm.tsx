@@ -5,6 +5,7 @@ import { User, Phone, Mail, Calendar, Clock, ChevronDown } from "lucide-react";
 import { motion } from "framer-motion";
 
 import { submitAppointment } from "@/app/actions";
+import { siteConfig } from "@/lib/site-config";
 
 export default function AppointmentForm() {
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -50,32 +51,32 @@ export default function AppointmentForm() {
                 {/* Actually, let's look at the screenshot: Form Left (White), Image Right (Dentist Scene) */}
 
                 {/* Left: Form */}
-                <div className="w-full lg:w-1/2 bg-[#F8F9FA] p-8 md:p-16 flex flex-col justify-center">
+                <div className="w-full lg:w-1/2 bg-gray-50 p-8 md:p-16 flex flex-col justify-center">
                     <div className="max-w-xl mx-auto w-full">
-                        <span className="text-[#00A651] font-bold tracking-widest uppercase text-sm mb-2 block text-center">Appointment</span>
-                        <h2 className="text-4xl md:text-5xl font-bold text-[#434E96] mb-2 font-serif text-center">
-                            Book your <span className="text-[#00A651]">Dentist</span>
+                        <span className="text-primary font-bold tracking-widest uppercase text-sm mb-2 block text-center">Appointment</span>
+                        <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-2 font-serif text-center">
+                            Book your <span className="text-primary">Dentist</span>
                         </h2>
-                        <h3 className="text-4xl md:text-5xl font-bold text-[#434E96] mb-10 font-serif text-center">
-                            for <span className="text-[#00A651]">Proper</span> Care
+                        <h3 className="text-4xl md:text-5xl font-bold text-secondary mb-10 font-serif text-center">
+                            for <span className="text-primary">Proper</span> Care
                         </h3>
 
                         {isSubmitted ? (
                             <motion.div
                                 initial={{ opacity: 0, scale: 0.9 }}
                                 animate={{ opacity: 1, scale: 1 }}
-                                className="bg-green-50 p-8 rounded-2xl text-center border border-green-200"
+                                className="bg-primary/10 p-8 rounded-2xl text-center border border-primary/20"
                             >
-                                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
                                     <span className="text-3xl">🎉</span>
                                 </div>
-                                <h3 className="text-2xl font-bold text-[#00A651] mb-2">Request Received!</h3>
+                                <h3 className="text-2xl font-bold text-primary mb-2">Request Received!</h3>
                                 <p className="text-gray-600 mb-6">
                                     Thank you, {formData.name}. We will contact you shortly on {formData.phone} to confirm your appointment.
                                 </p>
                                 <button
                                     onClick={() => setIsSubmitted(false)}
-                                    className="text-[#434E96] font-semibold underline"
+                                    className="text-secondary font-semibold underline"
                                 >
                                     Book another
                                 </button>
@@ -86,7 +87,7 @@ export default function AppointmentForm() {
                                     <div className="relative">
                                         <select
                                             name="service"
-                                            className="w-full px-6 py-4 rounded-xl bg-white border-none shadow-sm text-gray-500 outline-none appearance-none cursor-pointer focus:ring-2 focus:ring-[#00A651]/20 transition-all"
+                                            className="w-full px-6 py-4 rounded-xl bg-white border-none shadow-sm text-gray-500 outline-none appearance-none cursor-pointer focus:ring-2 focus:ring-primary/20 transition-all"
                                             value={formData.service}
                                             onChange={handleChange}
                                             required
@@ -104,13 +105,13 @@ export default function AppointmentForm() {
                                     <div className="relative">
                                         <select
                                             name="doctor"
-                                            className="w-full px-6 py-4 rounded-xl bg-white border-none shadow-sm text-gray-500 outline-none appearance-none cursor-pointer focus:ring-2 focus:ring-[#00A651]/20 transition-all"
+                                            className="w-full px-6 py-4 rounded-xl bg-white border-none shadow-sm text-gray-500 outline-none appearance-none cursor-pointer focus:ring-2 focus:ring-primary/20 transition-all"
                                             value={formData.doctor}
                                             onChange={handleChange}
                                             required
                                         >
                                             <option value="" disabled>Preferred Doctor</option>
-                                            <option value="dr_leena">Dr. Leena Shah</option>
+                                            <option value="dr_leena">{siteConfig.doctor.name}</option>
                                         </select>
                                         <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" />
                                     </div>
@@ -121,7 +122,7 @@ export default function AppointmentForm() {
                                         type="text"
                                         name="name"
                                         placeholder="Your Name"
-                                        className="w-full px-6 py-4 rounded-xl bg-white border-none shadow-sm outline-none placeholder:text-gray-400 focus:ring-2 focus:ring-[#00A651]/20 transition-all"
+                                        className="w-full px-6 py-4 rounded-xl bg-white border-none shadow-sm outline-none placeholder:text-gray-400 focus:ring-2 focus:ring-primary/20 transition-all"
                                         value={formData.name}
                                         onChange={handleChange}
                                         required
@@ -130,7 +131,7 @@ export default function AppointmentForm() {
                                         type="email"
                                         name="email"
                                         placeholder="Email Address"
-                                        className="w-full px-6 py-4 rounded-xl bg-white border-none shadow-sm outline-none placeholder:text-gray-400 focus:ring-2 focus:ring-[#00A651]/20 transition-all"
+                                        className="w-full px-6 py-4 rounded-xl bg-white border-none shadow-sm outline-none placeholder:text-gray-400 focus:ring-2 focus:ring-primary/20 transition-all"
                                         value={formData.email}
                                         onChange={handleChange}
                                         required
@@ -142,7 +143,7 @@ export default function AppointmentForm() {
                                         type="tel"
                                         name="phone"
                                         placeholder="Phone Number"
-                                        className="w-full px-6 py-4 rounded-xl bg-white border-none shadow-sm outline-none placeholder:text-gray-400 focus:ring-2 focus:ring-[#00A651]/20 transition-all"
+                                        className="w-full px-6 py-4 rounded-xl bg-white border-none shadow-sm outline-none placeholder:text-gray-400 focus:ring-2 focus:ring-primary/20 transition-all"
                                         value={formData.phone}
                                         onChange={handleChange}
                                         required
@@ -151,7 +152,7 @@ export default function AppointmentForm() {
                                     <input
                                         type="date"
                                         name="date"
-                                        className="w-full px-6 py-4 rounded-xl bg-white border-none shadow-sm outline-none text-gray-400 focus:ring-2 focus:ring-[#00A651]/20 transition-all"
+                                        className="w-full px-6 py-4 rounded-xl bg-white border-none shadow-sm outline-none text-gray-400 focus:ring-2 focus:ring-primary/20 transition-all"
                                         value={formData.date}
                                         onChange={handleChange}
                                         required
@@ -159,7 +160,7 @@ export default function AppointmentForm() {
                                     <input
                                         type="time"
                                         name="time"
-                                        className="w-full px-6 py-4 rounded-xl bg-white border-none shadow-sm outline-none text-gray-400 focus:ring-2 focus:ring-[#00A651]/20 transition-all"
+                                        className="w-full px-6 py-4 rounded-xl bg-white border-none shadow-sm outline-none text-gray-400 focus:ring-2 focus:ring-primary/20 transition-all"
                                         value={formData.time}
                                         onChange={handleChange}
                                         required
@@ -170,7 +171,7 @@ export default function AppointmentForm() {
                                     <button
                                         type="submit"
                                         disabled={isSubmitting}
-                                        className="inline-flex items-center gap-2 text-[#00A651] font-bold underline underline-offset-4 text-lg hover:text-[#434E96] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                                        className="inline-flex items-center gap-2 text-primary font-bold underline underline-offset-4 text-lg hover:text-secondary transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                                     >
                                         {isSubmitting ? "Sending..." : "Confirm Appointment"}
                                     </button>
@@ -187,9 +188,9 @@ export default function AppointmentForm() {
                         alt="Dentist Working"
                         className="absolute inset-0 w-full h-full object-cover"
                     />
-                    <div className="absolute inset-0 bg-blue-900/10"></div>
+                    <div className="absolute inset-0 bg-secondary/10"></div>
                     <div className="absolute right-0 bottom-0 p-4">
-                        <div className="bg-[#00A651] p-3 rounded-tl-xl text-white">
+                        <div className="bg-primary p-3 rounded-tl-xl text-white">
                             <ChevronDown className="rotate-180 w-6 h-6" />
                         </div>
                     </div>

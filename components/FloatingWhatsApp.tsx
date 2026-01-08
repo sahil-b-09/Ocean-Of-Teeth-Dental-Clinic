@@ -3,11 +3,12 @@
 import { MessageCircle } from "lucide-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { siteConfig } from "@/lib/site-config";
 
 export default function FloatingWhatsApp() {
     return (
         <Link
-            href="https://wa.me/917744975111"
+            href={siteConfig.social.whatsapp}
             target="_blank"
             rel="noopener noreferrer"
             className="fixed bottom-24 right-6 z-50 md:bottom-8 md:right-8"

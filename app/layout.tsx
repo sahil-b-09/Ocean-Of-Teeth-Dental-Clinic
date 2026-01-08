@@ -5,6 +5,7 @@ import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import MobileStickyBar from "@/components/MobileStickyBar";
 import SmoothScroll from "@/components/SmoothScroll";
 import CustomCursor from "@/components/CustomCursor";
+import { siteConfig } from "@/lib/site-config";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -12,8 +13,8 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Ocean Of Teeth - Cosmetic and Implant Dental Clinic",
-  description: "Premium Dental Care in Pune. Implants, Cosmetics, and more.",
+  title: `${siteConfig.name} - ${siteConfig.subtitle}`,
+  description: siteConfig.hero.description,
 };
 
 export default function RootLayout({
@@ -25,6 +26,13 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${outfit.variable} antialiased`}
+        style={
+          {
+            "--primary": siteConfig.theme.colors.primary,
+            "--secondary": siteConfig.theme.colors.secondary,
+            "--accent": siteConfig.theme.colors.accent,
+          } as React.CSSProperties
+        }
       >
         <SmoothScroll>
           <CustomCursor />
