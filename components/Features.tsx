@@ -1,14 +1,22 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Users, HeartPulse, Pill, type LucideIcon } from "lucide-react";
+import { type LucideIcon, Users, HeartPulse, Pill, Zap, Gem, Crown, Smile, Sparkles, Shield, Baby, ScanFace } from "lucide-react";
 import SplitText from "./SplitText";
 import { siteConfig } from "@/lib/site-config";
 
 const iconMap: Record<string, LucideIcon> = {
     "Users": Users,
     "HeartPulse": HeartPulse,
-    "Pill": Pill
+    "Pill": Pill,
+    "Zap": Zap,
+    "Gem": Gem,
+    "Crown": Crown,
+    "Smile": Smile,
+    "Sparkles": Sparkles,
+    "Shield": Shield,
+    "Baby": Baby,
+    "ScanFace": ScanFace
 };
 
 export default function Features() {

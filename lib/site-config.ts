@@ -41,44 +41,72 @@ export const siteConfig = {
             visible: true
         }
     },
-    features: {
-        title: "Our Expertise",
-        headingLine1: "Complete",
-        headingLine2: "Dental Solutions",
-        description: "From routine cleaning to advanced implants, we provide high-quality care for your entire family.",
-        items: [
-            {
-                icon: "Zap", // Root Canal
-                title: "Root Canal Treatment",
-                desc: "Painless advanced root canal therapy to save your natural teeth."
-            },
-            {
-                icon: "Sparkles", // Cosmetic
-                title: "Smile Designing",
-                desc: "Transform your smile with veneers, whitening, and aesthetic corrections."
-            },
-            {
-                icon: "Baby", // Kids
-                title: "Kid’s Dentistry",
-                desc: "Gentle and friendly dental care for your little ones."
-            },
-            {
-                icon: "Gem", // Implants
-                title: "Dental Implants",
-                desc: "Permanent and natural-looking solutions for missing teeth."
-            },
-            {
-                icon: "Smile", // Braces
-                title: "Braces & Aligners",
-                desc: "Straighten your teeth with modern orthodontic treatments."
-            },
-            {
-                icon: "Crown", // Crown (Custom icon logic in Features might default if not mapped, but 'Crown' isn't in Lucide? Using generic 'Award' or 'Star' if needed, but let's try 'Crown' or 'Activity')
-                title: "Crowns & Bridges", // Re-using an icon or picking a standard one
-                desc: "Restore function and appearance with durable crowns."
-            }
-        ]
-    },
+    services: [
+        {
+            title: "Root Canal Treatment",
+            slug: "root-canal-treatment",
+            icon: "Zap",
+            image: "/images/services/root-canal.png",
+            short: "Painless advanced root canal therapy to save your natural teeth.",
+            description: "Root Canal Treatment is a procedure used to treat infection or damage within the living tissue of a tooth. We remove the infected pulp, clean the area, and seal it to prevent further damage, saving your natural tooth."
+        },
+        {
+            title: "Dental Implants",
+            slug: "dental-implants",
+            icon: "Gem",
+            image: "/images/services/implant.png",
+            short: "Permanent and natural-looking solutions for missing teeth.",
+            description: "Dental Implants are the modern standard for replacing missing teeth. A titanium post is surgically placed in the jawbone to serve as a strong root for a natural-looking artificial tooth."
+        },
+        {
+            title: "Dental Crown and Bridge",
+            slug: "dental-crown-and-bridge",
+            icon: "Crown",
+            image: "/images/services/crowns.png",
+            short: "Restore function and appearance with durable crowns and bridges.",
+            description: "Crowns are caps used to restore damaged teeth, while Bridges fill the gap created by missing teeth. Both options are custom-made to look natural and restore your ability to chew and smile confidently."
+        },
+        {
+            title: "Braces",
+            slug: "braces",
+            icon: "Smile",
+            image: "/images/services/braces.png",
+            short: "Straighten your teeth with modern orthodontic treatments.",
+            description: "Orthodontic treatment with braces helps correct misaligned teeth and jaws. We offer both traditional metal braces and modern invisible options to give you a perfectly straight smile."
+        },
+        {
+            title: "Smile Designing and Cosmetic Dentistry",
+            slug: "smile-designing-and-cosmetic-dentistry",
+            icon: "Sparkles",
+            image: "/images/services/cosmetic.png",
+            short: "Cosmetic dentistry to transform your smile perfectly.",
+            description: "Smile Designing involves a comprehensive assessment of your smile to improve its aesthetics. From veneers to gum contouring, we create a smile that suits your face perfectly."
+        },
+        {
+            title: "Tooth Colored fillings",
+            slug: "tooth-colored-fillings",
+            icon: "Shield",
+            image: "/images/services/alignment.png",
+            short: "Aesthetic restorations that blend perfectly with your natural teeth.",
+            description: "Gone are the days of silver amalgam fillings. We use composite resins that match the natural color of your teeth, providing a durable and invisible restoration for cavities."
+        },
+        {
+            title: "Kid’s Dentistry",
+            slug: "kids-dentistry",
+            icon: "Baby",
+            image: "/images/services/pediatric.png",
+            short: "Gentle and friendly dental care for your little ones.",
+            description: "Pediatric dentistry focuses on the oral health of children from infancy through the teen years. We provide a friendly environment to ensure your child develops good dental habits early."
+        },
+        {
+            title: "Teeth cleaning and whitening",
+            slug: "teeth-cleaning-and-whitening",
+            icon: "ScanFace",
+            image: "/images/services/cleaning.png",
+            short: "Professional cleaning and whitening for a brighter smile.",
+            description: "Professional teeth cleaning removes plaque and tartar that brushing misses. Our whitening treatments can brighten your smile by several shades in just one visit."
+        }
+    ],
     doctor: {
         label: "Meet The Expert",
         name: "Dr. Sushma Kawale",
