@@ -1,19 +1,19 @@
 export const siteConfig = {
-    name: "City Dental Clinic",
+    name: "Salford Dental Clinic",
     subtitle: "Advanced Dental Care Center",
-    phone: "+1 (555) 123-4567",
-    phoneSecondary: "+1 (555) 987-6543",
-    email: "contact@citydental.com",
+    phone: "+91 8788454508",
+    phoneSecondary: "+91 8788454508",
+    email: "contact@salforddental.com",
     address: {
-        line1: "123 Health Avenue,",
-        line2: "Medical District,",
-        line3: "Cityville - 54321",
-        googleMapsLink: "#",
-        mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.279619177699!2d73.7431201!3d18.6514216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDM5JzA1LjEiTiA3M8KwNDQnMzUuMiJF!5e0!3m2!1sen!2sin!4v1638867498750!5m2!1sen!2sin"
+        line1: "Salford Dental Clinic,",
+        line2: "Near City Center,",
+        line3: "Maharashtra",
+        googleMapsLink: "https://maps.app.goo.gl/BgMEDEEcdSZkUoc57",
+        mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.2!2d73.7!3d18.6!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDM5JzA1LjEiTiA3M8KwNDQnMzUuMiJF!5e0!3m2!1sen!2sin!4v1638867498750!5m2!1sen!2sin"
     },
-    timing: "Mon-Sat: 9:00 AM - 8:00 PM",
+    timing: "Mon-Sat: 10:00 AM - 9:00 PM",
     social: {
-        whatsapp: "https://wa.me/15551234567",
+        whatsapp: "https://wa.me/918788454508?text=Hi%20Dr.%20Komal,%20I%20would%20like%20to%20book%20an%20appointment.",
         instagram: "#",
         facebook: "#",
         twitter: "#"
@@ -24,79 +24,94 @@ export const siteConfig = {
     },
     theme: {
         colors: {
-            primary: "#00A651",
-            secondary: "#434E96",
-            accent: "#C5A059"
+            primary: "#2F2E7F",   // Deep Royal Blue
+            secondary: "#1A1A2E", // Dark Navy for contrast text (Derived darker)
+            accent: "#E39A3B"     // Warm Dental Orange
         }
     },
     hero: {
-        tagline: "Your Smile Matters",
-        headingLine1: "Experience the",
-        headingLine2: "Perfect Smile",
-        description: "We provide comprehensive dental care for your entire family. From routine checkups to cosmetic procedures, we are dedicated to your oral health.",
+        tagline: "Your Smile, Our Passion",
+        headingLine1: "World Class",
+        headingLine2: "Dental Treatment",
+        description: "Salford Dental Clinic provides top-tier dental services with a focus on hygiene, comfort, and results. Dr. Komal Raut-Chavan and her team are here for you.",
         offer: {
-            text: "New Patient Offer",
-            value: "20% OFF",
+            text: "Checkup",
+            value: "FREE",
             visible: true
         }
     },
     features: {
-        title: "Why Choose Us",
-        headingLine1: "Excellence in",
-        headingLine2: "Dental Care",
-        description: "Our clinic offers state-of-the-art facilities and a team of experienced professionals to ensure you receive the best possible treatment.",
+        title: "Our Services",
+        headingLine1: "Complete",
+        headingLine2: "Oral Care",
+        description: "We offer a wide range of dental treatments to ensure your teeth stay healthy and beautiful.",
         items: [
             {
+                icon: "Gem",
+                title: "Dental Implants",
+                desc: "Replace missing teeth with durable and natural-looking implants."
+            },
+            {
+                icon: "Smile",
+                title: "Braces & Aligners",
+                desc: "Correct misalignment and achieve a perfect smile with our orthodontic solutions."
+            },
+            {
+                icon: "Sparkles",
+                title: "Teeth Whitening",
+                desc: "Brighten your smile safely and effectively with our whitening treatments."
+            },
+            {
+                icon: "Zap",
+                title: "Root Canal",
+                desc: "Advanced endodontic therapy to save trusted teeth from extraction."
+            },
+            {
+                icon: "Shield",
+                title: "Preventive Care",
+                desc: "Regular checkups and cleanings to maintain optimal oral health."
+            },
+            {
                 icon: "Users",
-                title: "Expert Team",
-                desc: "Highly qualified dentists with years of experience."
-            },
-            {
-                icon: "HeartPulse",
-                title: "Advanced Technology",
-                desc: "Using the latest dental equipment for precise treatments."
-            },
-            {
-                icon: "Pill",
-                title: "Pain-Free Density",
-                desc: "Comfortable procedures with modern anesthetic techniques."
+                title: "Family Dentistry",
+                desc: "Comprehensive care for patients of all ages."
             }
         ]
     },
     doctor: {
         label: "Meet The Expert",
-        name: "Dr. ALEX SMITH",
-        qualification: "Chief Dental Surgeon (BDS, MDS)",
-        description1: "Dr. Alex Smith is a dedicated dental professional with over 15 years of experience. He specializes in cosmetic and restorative dentistry, helping thousands of patients achieve their dream smiles.",
-        description2: "Committed to continuous learning, Dr. Smith stays updated with the latest advancements in dental science to provide the highest standard of care.",
+        name: "Dr. Komal Raut-Chavan",
+        qualification: "Dental Surgeon",
+        description1: "Dr. Komal Raut-Chavan is a dedicated professional committed to delivering the highest quality dental care. Her precise approach and warm demeanor make every patient feel at home.",
+        description2: "Whether you need a routine checkup or a complex procedure, Dr. Raut-Chavan ensures that you receive personalized attention and treatment plans tailored to your needs.",
         image: "/images/doctor-profile.png",
         stats: {
-            label: "Experience",
-            value: "15+ Years"
+            label: "Patients",
+            value: "2000+"
         }
     },
     testimonials: {
-        label: "Patient Stories",
-        headingLine1: "What Our",
-        headingLine2: "Patients Say",
-        description: "Read about the experiences of our valued patients and see why we are the preferred choice for dental care.",
+        label: "Testimonials",
+        headingLine1: "Client",
+        headingLine2: "Feedback",
+        description: "See what our happy patients have to say about their experience at Salford Dental Clinic.",
         items: [
             {
-                name: "John Doe",
-                role: "Dental Implant",
-                content: "The best dental experience I've ever had. The staff was friendly and the procedure was completely painless.",
+                name: "Suresh Mehta",
+                role: "Implant Patient",
+                content: "Dr. Komal is an excellent dentist. The clinic is very well equipped and the staff is cooperative.",
                 stars: 5,
             },
             {
-                name: "Jane Roe",
+                name: "Anita Singh",
+                role: "Regular Checkup",
+                content: "Very hygienic and professional. I recommend Salford Dental Clinic for all dental needs.",
+                stars: 5,
+            },
+            {
+                name: "Rahul Kulkarni",
                 role: "Teeth Whitening",
-                content: "I'm amazed by the results! My smile is so much brighter now. Highly recommend this clinic.",
-                stars: 5,
-            },
-            {
-                name: "Michael Bean",
-                role: "Root Canal",
-                content: "Professional, clean, and efficient. Dr. Smith explained everything clearly and made me feel at ease.",
+                content: "Great experience! My results were amazing and the process was very smooth.",
                 stars: 5,
             }
         ]
