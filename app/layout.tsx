@@ -4,7 +4,6 @@ import "./globals.css";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import MobileStickyBar from "@/components/MobileStickyBar";
 import SmoothScroll from "@/components/SmoothScroll";
-import Preloader from "@/components/Preloader";
 import CustomCursor from "@/components/CustomCursor";
 
 const outfit = Outfit({
@@ -28,7 +27,6 @@ export default function RootLayout({
         className={`${outfit.variable} antialiased`}
       >
         <SmoothScroll>
-          <Preloader />
           <CustomCursor />
           {children}
           <FloatingWhatsApp />
