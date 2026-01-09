@@ -19,13 +19,13 @@ export const siteConfig = {
         twitter: "#"
     },
     images: {
-        logo: "/images/logo.png",
+        logo: "/images/salford-logo.png",
         hero: "/images/hero_perfect_smile_indian.png"
     },
     theme: {
         colors: {
-            primary: "#2F2E7F",   // Deep Royal Blue
-            secondary: "#1A1A2E", // Dark Navy for contrast text (Derived darker)
+            primary: "#222461",   // Deep Blue from Logo
+            secondary: "#1A1A2E", // Dark Navy for contrast text
             accent: "#E39A3B"     // Warm Dental Orange
         }
     },
